@@ -1,4 +1,72 @@
-<nav id="menu-lateral">
+<mat-sidenav-container fullscreen>
+    <mat-sidenav opened="true" mode="side" class="menu-lateral">
+        <mat-nav-list>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Dashboard
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-nav-list>
+                    <mat-list-item ><a routerLink="dashboard">Por Local</a></mat-list-item>
+                    <mat-list-item>Estatísticas</mat-list-item>
+                    <mat-list-item>Período</mat-list-item>
+                    <mat-list-item>Personalizado</mat-list-item>
+                </mat-nav-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>Usuários</mat-expansion-panel-header>
+                <mat-nav-list>
+                    <mat-list-item>
+                        <a routerLink="usuarios">
+                        Usuário atual
+                    </a>
+                    </mat-list-item>
+                </mat-nav-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>Relatórios</mat-expansion-panel-header>
+                <mat-nav-list>
+                    <mat-list-item><a routerLink="relatorios">
+                        Exportar XLS</a></mat-list-item>
+                    <mat-list-item>Exportar PDF</mat-list-item>
+                    <mat-list-item>Exportar PNG</mat-list-item>
+                </mat-nav-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>Câmeras</mat-expansion-panel-header>
+                <mat-nav-list>
+                    <mat-list-item><a routerLink="cameras">
+                        Prédio
+                    </a></mat-list-item>
+                    <mat-list-item>Primeiro andar</mat-list-item>
+                    <mat-list-item>Segundo andar</mat-list-item>
+                    <mat-list-item>Terceiro andar</mat-list-item>
+                </mat-nav-list>
+            </mat-expansion-panel>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!--
+<mat-sidenav-container >
+    <mat-sidenav opened="true" mode="side" id="menu-lateral">
+        <mat-nav-list>
+            <mat-list-item><a routerLink="usuarios">Usuários</a></mat-list-item>
+            <mat-list-item><a routerLink="relatorios">Relatórios</a></mat-list-item>
+            <mat-list-item><a routerLink="cameras">Câmeras</a></mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+        <button mat-button (click)="opened=!opened">Toggle</button>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+-->
+<!--<nav id="menu-lateral">
     <img src="INSERIR LINK" alt="Logo Mack + aTech">
     <header id="navbar-title">CONTADOR DE GENTE</header>
     <p><a class="item-menu">MENU</a></p>
@@ -35,3 +103,4 @@
         <p><a class="item-menu">Terceiro andar</a></p>
     </div>
 </nav>
+-->
